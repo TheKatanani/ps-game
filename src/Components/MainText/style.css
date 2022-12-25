@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@700&display=swap');
+.mainText{
+    width: 473px;
+    height: 164px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 38px;
+    position: relative;
+    color: #fff;
+    transform: translateY(-112px);
+    
+}
+.mainText::before{
+    content: "“";
+    font-family: 'Gayathri';
+    font-weight: 700;
+font-size: 96px;
+    color: #00DAF7;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.after{
+    position: absolute;
+    right: 10px;
+    bottom: -130px;
+    width: 30px;
+    height: 10px;
+    transform: rotate(180deg);
+    background-color: #fff;
+}
+.after::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-color: #fff;
+}
+
+.logIn,
+.logIn::before{
+    color: #696F79;
+}

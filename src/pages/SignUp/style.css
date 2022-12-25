@@ -1,0 +1,56 @@
+.mainbox.signUp{
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+    height: 1024px;
+    margin: auto;
+    /* border: 1px solid #1565D8; */
+    background-color: #FFFFFF;
+}
+.signUp .imgBox{
+    background-image: url('../../images/Rectangle\ 31.png');
+    background-size: cover;
+    width: 642px;
+    height: 1024px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signUp .imgBox::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1565D8;
+    opacity: 0.9;
+}
+.signUp .imgBox .Logo{
+    position: absolute;
+    top: 70px;
+    left: 90px;
+}
+.signUp .form{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.LogInBtn{
+    position: relative;
+}
+.LogInBtn button{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+}
+.LogInBtn img{
+    position: absolute;
+    top: 50%;
+    left: 55px;
+    transform: translateY(-50%);
+}
+

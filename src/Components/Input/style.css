@@ -1,0 +1,23 @@
+
+div label{
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #696F79;
+    margin-top: 10px;
+}
+div input{
+    width: 426px;
+    height: 64px;
+    border: 1px solid #8692A6;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #8692A6;
+    padding: 0 0px 0 40px; 
+    margin: 15px 0;
+    outline: none;
+}

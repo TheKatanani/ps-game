@@ -1,0 +1,12 @@
+.back{
+    position: absolute;
+    top: 74px;
+    left: 77px;
+    cursor: pointer;
+}
+.back span{
+    margin-left: 8px;
+}
+.back svg{
+    transform: translateY(3px);
+}

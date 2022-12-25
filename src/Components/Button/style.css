@@ -1,0 +1,14 @@
+button {
+  width: 426px;
+  height: 64px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+button.Login{
+  margin: 52px 0 27px;
+}
