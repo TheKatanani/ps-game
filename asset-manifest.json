@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-tasd-4-form/static/css/main.76749708.css",
+    "main.js": "/react-tasd-4-form/static/js/main.3bcb7fe0.js",
+    "static/js/787.8d9fecf9.chunk.js": "/react-tasd-4-form/static/js/787.8d9fecf9.chunk.js",
+    "static/media/Rectangle 31.png": "/react-tasd-4-form/static/media/Rectangle 31.8ac7513637c362533871.png",
+    "static/media/superscene-34-joystick_trans 1.png": "/react-tasd-4-form/static/media/superscene-34-joystick_trans 1.3751effe7db31b44665e.png",
+    "static/media/flat-color-icons_google.svg": "/react-tasd-4-form/static/media/flat-color-icons_google.c3c756b00d59e918ba8da412e4109bf5.svg",
+    "index.html": "/react-tasd-4-form/index.html",
+    "main.76749708.css.map": "/react-tasd-4-form/static/css/main.76749708.css.map",
+    "main.3bcb7fe0.js.map": "/react-tasd-4-form/static/js/main.3bcb7fe0.js.map",
+    "787.8d9fecf9.chunk.js.map": "/react-tasd-4-form/static/js/787.8d9fecf9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76749708.css",
+    "static/js/main.3bcb7fe0.js"
+  ]
+}
