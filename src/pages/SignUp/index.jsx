@@ -12,10 +12,12 @@ import Or from "../../Components/Or";
 import PasswordStrong from "../../Components/PasswordStrong";
 import Back from "../../Components/Back";
 import Checkbox from "../../Components/Checkbox";
+import Alert from "../../Components/Alart";
 const defaults = {
   email: "",
   password: "",
   Repeatpassword: "",
+  isWrongRepeat:false,
 };
 export default class SignUp extends Component {
   state = {
@@ -24,6 +26,8 @@ export default class SignUp extends Component {
     Repeatpassword: "",
     myData: defaults,
     passwordStrong: "",
+    isWrongRepeat:false,
+    successfullyRegistered:false
   };
   validate = (value) => {
     const strongRegex = new RegExp(
@@ -57,7 +61,8 @@ export default class SignUp extends Component {
         },
         ...defaults,
       }));
-    }
+    this.setState({successfullyRegistered:true})
+    }else  this.setState({isWrongRepeat:true})
   };
   handleChangeInput = (e) => {
     const { value, id } = e.target;
@@ -66,6 +71,7 @@ export default class SignUp extends Component {
       this.validate(value);
     }
   };
+  close =()=> this.setState({successfullyRegistered:false})
   render() {
     return (
       <Container>
@@ -107,6 +113,7 @@ export default class SignUp extends Component {
                   placeholder="Repeat password"
                   label="Repeat password*"
                   value={this.state.Repeatpassword}
+                  className={this.state.isWrongRepeat?"wrong":""}
                 />
                 <Checkbox id="agree" label="I agree to terms & conditions" />
                 <Button type="submit" bgColor="#1565D8" color="#fff">
@@ -127,6 +134,7 @@ export default class SignUp extends Component {
               </form>
             </div>
           </div>
+        {this.state.successfullyRegistered&&<Alert Login={ this.goToLogIn} close={this.close}/>}
         </div>
       </Container>
     );

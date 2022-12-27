@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Container from "../../Components/Container";
-// import Background from "../../images/Rectangle 31.png";
-// import Logo from "../../images/Group 4.png";
 import GoogleIcon from "../../images/flat-color-icons_google.svg";
 import Github from "../../images/Vectorgithub.png";
 import Ln from "../../images/Vectorin.png";
@@ -17,22 +15,6 @@ import LogInImg from "../../images/superscene-34-joystick_trans 1.png";
 import LogInIcons from "../../Components/LogInIcons";
 import logInPassword from "../../images/VectorpasswordIcon.png";
 
-// const gmail = {
-//   liEmail: "exampleGmail@gmai.com",
-//   liPassword: "example123",
-// };
-// const github = {
-//   liEmail: "exampleGithub@gmai.com",
-//   liPassword: "example123",
-// };
-// const linkedIn = {
-//   liEmail: "exampleLinkedIn@gmai.com",
-//   liPassword: "example123",
-// };
-// const twitter = {
-//   liEmail: "exampleTwitter@gmai.com",
-//   liPassword: "example123",
-// };
 const initialData = {
   gmail: {
     liEmail: "exampleGmail@gmai.com",
@@ -71,24 +53,7 @@ export default class LogIn extends Component {
       liPassword: initialData[by].liPassword,
     });
   };
-  // byTwitter = () => {
-  //   this.setState((prevState) => ({
-  //     liEmail: prevState.myData.liEmail,
-  //     liPassword: prevState.myData.liPassword,
-  //   }));
-  // };
-  // byLinkedIn = () => {
-  //   this.setState((prevState) => ({
-  //     liEmail: prevState.myData.liEmail,
-  //     liPassword: prevState.myData.liPassword,
-  //   }));
-  // };
-  // byGithub = () => {
-  //   this.setState((prevState) => ({
-  //     liEmail: prevState.myData.liEmail,
-  //     liPassword: prevState.myData.liPassword,
-  //   }));
-  // };
+
   goToSignUp = () => {
     this.props.app.setState({ datashow: "SginUp" });
   };

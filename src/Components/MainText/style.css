@@ -8,7 +8,7 @@
     line-height: 38px;
     position: relative;
     color: #fff;
-    transform: translateY(-112px);
+    transform: translateY(-72px);
     
 }
 .mainText::before{
@@ -23,8 +23,8 @@ font-size: 96px;
 }
 .after{
     position: absolute;
-    right: 10px;
-    bottom: -130px;
+    right: 45px;
+    bottom: -145px;
     width: 30px;
     height: 10px;
     transform: rotate(180deg);
@@ -41,4 +41,8 @@ font-size: 96px;
 .logIn,
 .logIn::before{
     color: #696F79;
+}
+.mainText span{
+    position: absolute;
+    bottom: -85PX;
 }

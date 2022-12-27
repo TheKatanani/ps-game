@@ -1,0 +1,64 @@
+
+  .Alert {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    transform: translate(-50%,-50%);
+    height: 300px;
+    width: 650px;
+    border-radius: 20px;
+    color: #1565D8;
+    background: white;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 8%);
+    padding: 15px;
+    transition: 0.3s ease-in;
+}
+  .Alert-InText {
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+  .Alert-InBtn {
+      padding: 10px 50px;
+    border-radius: 20px;
+    font-family: Inria sans;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid white;
+    transition:0.2s ease-in-out all;
+    cursor:pointer;
+}
+  .Btn-Right:hover{
+      background:#FFF;
+    color: #1565D8;
+    border: 1px solid #1565D8;
+  }
+  .Btn-Left:hover{
+    background:#ffffff;
+    border: 1px solid #121212;
+  }
+  
+  .Btn-Right{
+      background: #1565D8;
+      color: #fff;
+    }
+ 
+  .AlertBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+  .AlertBtns  button{
+    font-size: 25px;
+    flex: 1;
+}
+.Alert .Logo {
+    margin: 35px auto 0;
+    text-align: center;
+}
+.Alert .Logo img{
+    width: 170px;
+}

@@ -10,6 +10,10 @@ font-size: 30px;
 line-height: 36px;
 color: #000000;
 }
+.LogIn .FormText h1 {
+    margin-bottom: 12px;
+    font-size: 42px;
+}
 .FormText p{
     font-weight: 400;
     font-size: 18px;

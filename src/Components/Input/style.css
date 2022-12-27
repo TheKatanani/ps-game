@@ -21,3 +21,6 @@ div input{
     margin: 15px 0;
     outline: none;
 }
+#Repeatpassword.wrong{
+    border-color: red;
+}

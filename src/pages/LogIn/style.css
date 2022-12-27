@@ -38,6 +38,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    transform: translateY(-35px);
 }
 .LogIn .back{
     position: absolute;
@@ -49,7 +50,7 @@
 .LogIn .LogInImg{
     position: absolute;
     bottom: 97px;
-    right: 0;
+    right: -37px;
 }
 
 .icons{

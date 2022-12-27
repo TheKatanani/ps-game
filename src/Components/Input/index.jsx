@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./style.css";
 export default class Input extends Component {
   render() {
-    console.log(this.props.value);
     return (
       <div>
         <label htmlFor={this.props.id}>{this.props.label}</label>
@@ -14,6 +13,7 @@ export default class Input extends Component {
           required
           value={this.props.value}
           minLength="6"
+          className={this.props.className}
         />
       </div>
     );

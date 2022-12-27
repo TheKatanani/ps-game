@@ -39,6 +39,9 @@
     align-items: center;
     position: relative;
 }
+.signUp .form .content{
+    transform: translateY(75px);
+}
 
 
 .LogInBtn{
@@ -54,3 +57,8 @@
     transform: translateY(-50%);
 }
 
+.dots{
+    position: absolute;
+    top: 212px;
+    right: 200px;
+}
