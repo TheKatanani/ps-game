@@ -36,9 +36,9 @@ export default class SignUp extends Component {
       mediumRegex = new RegExp(
         "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})"
       );
-    if (strongRegex.test(value) && value.length >= 6) {
+    if (strongRegex.test(value) ) {
       this.setState({ passwordStrong: "strong" });
-    } else if (mediumRegex.test(value)&& value.length >= 6 ) {
+    } else if (mediumRegex.test(value) ) {
       this.setState({ passwordStrong: "medium" });
     } else if(value.length >= 1){
       this.setState({ passwordStrong: "weak" });
