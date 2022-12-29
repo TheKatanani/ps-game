@@ -1,16 +1,14 @@
 .mainbox.signUp{
     display: flex;
     justify-content: center;
-    width: 1440px;
     height: 1024px;
     margin: auto;
-    /* border: 1px solid #1565D8; */
     background-color: #FFFFFF;
 }
 .signUp .imgBox{
     background-image: url('../../images/Rectangle\ 31.png');
     background-size: cover;
-    width: 642px;
+    width: 44.6%;
     height: 1024px;
     position: relative;
     display: flex;
@@ -40,7 +38,7 @@
     position: relative;
 }
 .signUp .form .content{
-    transform: translateY(75px);
+    transform: translateY(25px);
 }
 
 

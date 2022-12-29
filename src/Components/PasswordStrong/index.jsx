@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import './style.css'
 export default class PasswordStrong extends Component {
   render() {
-    let passwordStrong = this.props.passwordStrong,massege;
+    let passwordStrong = this.props.passwordStrength
+    ,massege;
 
 
         if(passwordStrong==="strong"){

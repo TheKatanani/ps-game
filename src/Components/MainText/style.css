@@ -11,6 +11,9 @@
     transform: translateY(-72px);
     
 }
+.mainText.logIn{
+font-style: italic;
+}
 .mainText::before{
     content: "“";
     font-family: 'Gayathri';

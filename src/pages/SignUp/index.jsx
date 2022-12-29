@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import Container from "../../Components/Container";
+import {object , string, boolean } from 'yup';
+
+import "./style.css";
+
 import Dots from "../../images/Group.png";
 import GoogleIcon from "../../images/flat-color-icons_google.svg";
+
+import Container from "../../Components/Container";
 import Button from "../../Components/Button";
 import MainText from "../../Components/MainText";
 import Logo from "../../Components/Logo";
-import "./style.css";
 import FormText from "../../Components/FormText";
 import Input from "../../Components/Input";
 import Or from "../../Components/Or";
@@ -13,57 +17,104 @@ import PasswordStrong from "../../Components/PasswordStrong";
 import Back from "../../Components/Back";
 import Checkbox from "../../Components/Checkbox";
 import Alert from "../../Components/Alart";
+
 const defaults = {
+  name:"",
   email: "",
   password: "",
-  Repeatpassword: "",
+  confirmPassword: "",
   isWrongRepeat:false,
-};
+  passwordStrength: "",
+}
+const passwordRegexStrong = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#*$%^&])(?=.{8,})/;
+    const passwordRegexMedium = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.{6,})/;
 export default class SignUp extends Component {
   state = {
+    name:"",
     email: "",
     password: "",
-    Repeatpassword: "",
+    confirmPassword: "",
     myData: defaults,
-    passwordStrong: "",
+    passwordStrength: "",
     isWrongRepeat:false,
-    successfullyRegistered:false
+    isSuccessfullyRegistered:false,
+    isChecked:false
   };
+  schema = object().shape({
+    name: 
+      string()
+      .min(8, "Name should be more than 8 characters long")
+      .max(20)
+      .required("Name is required"),
+    email: 
+      string()
+      .email("Invalid email")
+      .required("Email is required"),
+    password: 
+      string()
+      .min(8, "Password must be at least 8 characters long")
+      .matches(passwordRegexStrong, "Password must contain at least 1 lowercase letter, 1 uppercase letter, 1 number, and 1 special character")
+      .required("Password is required"),
+    confirmPassword: 
+    string()
+    .test('passwords-match', 'Passwords must match',  () =>{
+      const status = this.state.password === this.state.confirmPassword
+      this.setState({isWrongRepeat: !status})
+      return status;
+    })
+    .required("Confirm password is required"),
+    isChecked: 
+      boolean()
+      .oneOf([true], "You must agree to the terms and conditions")
+      .required("You must agree to the terms and conditions"),
+  });
+  
   validate = (value) => {
-    const strongRegex = new RegExp(
-        "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})"
-      ),
-      mediumRegex = new RegExp(
-        "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})"
-      );
-    if (strongRegex.test(value) ) {
-      this.setState({ passwordStrong: "strong" });
-    } else if (mediumRegex.test(value) ) {
-      this.setState({ passwordStrong: "medium" });
-    } else if(value.length >= 1){
-      this.setState({ passwordStrong: "weak" });
-    }else this.setState({ passwordStrong: "" });
+      if (value.match(passwordRegexStrong)) {
+        this.setState({passwordStrength:"strong"})
+      }
+      else if (value.match(passwordRegexMedium)) {
+        this.setState({passwordStrength:"medium"})
+      } else {
+        this.setState({passwordStrength:"weak"})
+      }
   };
+  // why the validate never to go in then ?! and do this in schema is importent ?!
+  // validate = (value) => {
+  //   this.schema.validate({password: value})
+  //   .then(() => {
+  //     // Password is strong
+  //     console.log("strong password");
+  //     this.setState({passwordStrength:"strong"})
+  //   })
+  //   .catch(() => {
+      //     // Password is medium or weak
+  //      if (value.match(passwordRegexMedium)) {
+  //       this.setState({passwordStrength:"medium"})
+  //     } else {
+  //       this.setState({passwordStrength:"weak"})
+  //     }
+  //   });
+  // };
 
-  goToLogIn = (gmail) => {
-    this.props.app.setState({
-      initialGmail: gmail ? true : false,
-      datashow: "LogIn",
-    });
-  };
   handleSubmit = (e) => {
-    e.preventDefault();
-    if (this.state.password === this.state.Repeatpassword) {
-      this.setState((prevState) => ({
-        myData: {
-          email: prevState.email,
-          password: prevState.password,
-        },
-        ...defaults,
-      }));
-    this.setState({successfullyRegistered:true})
-    }else  this.setState({isWrongRepeat:true})
+    e.preventDefault()
+    this.schema
+    .validate({
+      name:this.state.name,
+      email: this.state.email,
+      password: this.state.password,
+      confirmPassword: this.state.confirmPassword,
+      isChecked:this.state.isChecked
+    })
+    .then(() => {
+      this.setState((prevState) => ({ myData: { name: prevState.name, email: prevState.email, password: prevState.password },isSuccessfullyRegistered:true, ...defaults }));
+    })
+    .catch((e) => console.log(e.errors));
   };
+  handleChangeCheckBox = (e)=>{
+    this.setState({isChecked:e.target.checked})
+  }
   handleChangeInput = (e) => {
     const { value, id } = e.target;
     this.setState({ [id]: value });
@@ -71,7 +122,7 @@ export default class SignUp extends Component {
       this.validate(value);
     }
   };
-  close =()=> this.setState({successfullyRegistered:false})
+  close =()=> this.setState({isSuccessfullyRegistered:false})
   render() {
     return (
       <Container>
@@ -82,13 +133,21 @@ export default class SignUp extends Component {
             <MainText color="#fff" />
           </div>
           <div className="form">
-            <Back onclick={() => this.goToLogIn()} />
+            <Back onclick={() => this.props.pageShow("LogIn")} />
             <div className="content">
               <FormText
                 H1="Register Individual Account!"
                 P="For the purpose of gamers regulation, your details are required."
               />
               <form onSubmit={this.handleSubmit}>
+              <Input
+                  onChange={this.handleChangeInput}
+                  id="name"
+                  type="text"
+                  placeholder="Enter email name"
+                  label="User Name*"
+                  value={this.state.name}
+                />
                 <Input
                   onChange={this.handleChangeInput}
                   id="email"
@@ -105,17 +164,17 @@ export default class SignUp extends Component {
                   label="Create password*"
                   value={this.state.password}
                 />
-                <PasswordStrong passwordStrong={this.state.passwordStrong} />
+                <PasswordStrong passwordStrength={this.state.passwordStrength} />
                 <Input
                   onChange={this.handleChangeInput}
-                  id="Repeatpassword"
+                  id="confirmPassword"
                   type="password"
                   placeholder="Repeat password"
                   label="Repeat password*"
-                  value={this.state.Repeatpassword}
+                  value={this.state.confirmPassword}
                   className={this.state.isWrongRepeat?"wrong":""}
                 />
-                <Checkbox id="agree" label="I agree to terms & conditions" />
+                <Checkbox id="agree" label="I agree to terms & conditions" onChange={this.handleChangeCheckBox} />
                 <Button type="submit" bgColor="#1565D8" color="#fff">
                   Register Account
                 </Button>
@@ -125,7 +184,7 @@ export default class SignUp extends Component {
                   <Button
                     type="button"
                     bgColor="#fff"
-                    onclick={() => this.goToLogIn(true)}
+                    onclick={() => this.props.pageShow("LogIn", true)}
                     color="#000"
                   >
                     login
@@ -134,7 +193,7 @@ export default class SignUp extends Component {
               </form>
             </div>
           </div>
-        {this.state.successfullyRegistered&&<Alert Login={ this.goToLogIn} close={this.close}/>}
+        {this.state.isSuccessfullyRegistered&&<Alert Login={ () => this.props.pageShow("LogIn")} close={this.close}/>}
         </div>
       </Container>
     );

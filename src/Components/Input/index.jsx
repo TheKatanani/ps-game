@@ -12,7 +12,6 @@ export default class Input extends Component {
           onChange={this.props.onChange}
           required
           value={this.props.value}
-          minLength="6"
           className={this.props.className}
         />
       </div>

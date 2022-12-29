@@ -6,11 +6,17 @@ class App extends React.Component {
     datashow:"LogIn",
     initialGmail:false
   }
+  pageShow = (bage,byGmail=false)=>{
+    this.setState({datashow:bage,
+    initialGmail:byGmail
+    })
+  }
  render(){
-  
    return (
     <>
-      {this.state.datashow==="LogIn"?<LogIn app={this} initialGmail={this.state.initialGmail}/>:<SignUp app={this}/>}
+      {this.state.datashow==="LogIn" ? 
+      <LogIn pageShow={this.pageShow} initialGmail={this.state.initialGmail}/> : 
+      <SignUp pageShow={this.pageShow} />}
     </>
   );
 }

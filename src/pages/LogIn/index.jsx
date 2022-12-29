@@ -156,7 +156,7 @@ export default class LogIn extends Component {
                 </Button>
                 <p className="Register">
                   Don’t have an account?{" "}
-                  <span onClick={() => this.goToSignUp()}>Register</span>
+                  <span onClick={() => this.props.pageShow("SignUp")}>Register</span>
                 </p>
               </form>
             </div>
