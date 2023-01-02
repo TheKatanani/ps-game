@@ -1,18 +1,34 @@
 {
   "files": {
-    "main.css": "/react-tasd-4-form/static/css/main.76749708.css",
-    "main.js": "/react-tasd-4-form/static/js/main.3bcb7fe0.js",
-    "static/js/787.8d9fecf9.chunk.js": "/react-tasd-4-form/static/js/787.8d9fecf9.chunk.js",
-    "static/media/Rectangle 31.png": "/react-tasd-4-form/static/media/Rectangle 31.8ac7513637c362533871.png",
-    "static/media/superscene-34-joystick_trans 1.png": "/react-tasd-4-form/static/media/superscene-34-joystick_trans 1.3751effe7db31b44665e.png",
-    "static/media/flat-color-icons_google.svg": "/react-tasd-4-form/static/media/flat-color-icons_google.c3c756b00d59e918ba8da412e4109bf5.svg",
-    "index.html": "/react-tasd-4-form/index.html",
-    "main.76749708.css.map": "/react-tasd-4-form/static/css/main.76749708.css.map",
-    "main.3bcb7fe0.js.map": "/react-tasd-4-form/static/js/main.3bcb7fe0.js.map",
-    "787.8d9fecf9.chunk.js.map": "/react-tasd-4-form/static/js/787.8d9fecf9.chunk.js.map"
+    "main.css": "/React-First-Project/static/css/main.69332953.css",
+    "main.js": "/React-First-Project/static/js/main.537ac3b2.js",
+    "static/js/787.8d9fecf9.chunk.js": "/React-First-Project/static/js/787.8d9fecf9.chunk.js",
+    "static/media/Rectangle 31.png": "/React-First-Project/static/media/Rectangle 31.8ac7513637c362533871.png",
+    "static/media/ed663199338341 1.png": "/React-First-Project/static/media/ed663199338341 1.cb23d87a5ff3c2b81e00.png",
+    "static/media/Rectangle 3.png": "/React-First-Project/static/media/Rectangle 3.9424903c4f8ef7dda794.png",
+    "static/media/Rectangle 4.png": "/React-First-Project/static/media/Rectangle 4.780d7265c31a30e3228f.png",
+    "static/media/Rectangle 11.png": "/React-First-Project/static/media/Rectangle 11.6be7fef663ec340c27df.png",
+    "static/media/Rectangle 2.png": "/React-First-Project/static/media/Rectangle 2.3b55114cd9f40ddd5b49.png",
+    "static/media/God-of-war-ragnarok--removebg-preview 1.png": "/React-First-Project/static/media/God-of-war-ragnarok--removebg-preview 1.e5d1974aee8537169d04.png",
+    "static/media/godOfWar.png": "/React-First-Project/static/media/godOfWar.e3b64f5bd389cb740ea4.png",
+    "static/media/HD-wallpaper-miles-morales-ps5-spiderman-watch-removebg-preview 1.png": "/React-First-Project/static/media/HD-wallpaper-miles-morales-ps5-spiderman-watch-removebg-preview 1.069719e8af135155b66a.png",
+    "static/media/superscene-34-joystick_trans 1.png": "/React-First-Project/static/media/superscene-34-joystick_trans 1.3751effe7db31b44665e.png",
+    "static/media/Suicidesquadteaser 1.png": "/React-First-Project/static/media/Suicidesquadteaser 1.ccbeb4ea0e2fdaa7ba1a.png",
+    "static/media/FRIENDS.png": "/React-First-Project/static/media/FRIENDS.8688f742b3c88fa898a0.png",
+    "static/media/ProfileImg.png": "/React-First-Project/static/media/ProfileImg.fff14b80f19901895ad9.png",
+    "static/media/png-clipart-disgaea-3-playstation-3-playstation-4-xbox-360-trophy-golden-cup-game-medal 1.png": "/React-First-Project/static/media/png-clipart-disgaea-3-playstation-3-playstation-4-xbox-360-trophy-golden-cup-game-medal 1.e1cb81454163ca9f47ad.png",
+    "static/media/Ellipse 2.png": "/React-First-Project/static/media/Ellipse 2.bedc76ae925c7ebdf86d.png",
+    "static/media/Ellipse 4.png": "/React-First-Project/static/media/Ellipse 4.75f74e3b858b5c622389.png",
+    "static/media/Ellipse 3.png": "/React-First-Project/static/media/Ellipse 3.e692e1d0b409468acbf8.png",
+    "static/media/Ellipse 5.png": "/React-First-Project/static/media/Ellipse 5.d134cd3c7ce41a02c7a4.png",
+    "static/media/flat-color-icons_google.svg": "/React-First-Project/static/media/flat-color-icons_google.c3c756b00d59e918ba8da412e4109bf5.svg",
+    "index.html": "/React-First-Project/index.html",
+    "main.69332953.css.map": "/React-First-Project/static/css/main.69332953.css.map",
+    "main.537ac3b2.js.map": "/React-First-Project/static/js/main.537ac3b2.js.map",
+    "787.8d9fecf9.chunk.js.map": "/React-First-Project/static/js/787.8d9fecf9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.76749708.css",
-    "static/js/main.3bcb7fe0.js"
+    "static/css/main.69332953.css",
+    "static/js/main.537ac3b2.js"
   ]
 }
