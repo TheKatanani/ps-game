@@ -1,0 +1,19 @@
+.Welcome{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* justify-contesnt: flex-end; */
+    padding: 20px;
+    width: 450px;
+    margin-left: auto;
+}
+.Welcome p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    text-align: end;
+    color: #000000;
+
+}

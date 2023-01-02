@@ -1,72 +1,82 @@
 import React, { Component } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+import "./style.css";
+
 import Container from "../../Components/Container";
+import Button from "../../Components/Button";
+import MainText from "../../Components/MainText";
+import FormText from "../../Components/FormText";
+import Logo from "../../Components/Logo";
+import Input from "../../Components/Input";
+import Or from "../../Components/Or";
+import LogInIcons from "../../Components/LogInIcons";
+// the images
 import GoogleIcon from "../../images/flat-color-icons_google.svg";
 import Github from "../../images/Vectorgithub.png";
 import Ln from "../../images/Vectorin.png";
 import Twitter from "../../images/Vectortwitter.png";
-import Button from "../../Components/Button";
-import MainText from "../../Components/MainText";
-import Logo from "../../Components/Logo";
-import "./style.css";
-import FormText from "../../Components/FormText";
-import Input from "../../Components/Input";
-import Or from "../../Components/Or";
 import LogInImg from "../../images/superscene-34-joystick_trans 1.png";
-import LogInIcons from "../../Components/LogInIcons";
 import logInPassword from "../../images/VectorpasswordIcon.png";
-
+// to fill defult data in four buttons and defult gmail from the signUp 
 const initialData = {
   gmail: {
-    liEmail: "exampleGmail@gmai.com",
-    liPassword: "example123",
+    email: "exampleGmail@gmai.com",
+    password: "example123",
   },
   github: {
-    liEmail: "exampleGithub@gmai.com",
-    liPassword: "example123",
+    email: "exampleGithub@gmai.com",
+    password: "example123",
   },
   linkedIn: {
-    liEmail: "exampleLinkedIn@gmai.com",
-    liPassword: "example123",
+    email: "exampleLinkedIn@gmai.com",
+    password: "example123",
   },
   twitter: {
-    liEmail: "exampleTwitter@gmai.com",
-    liPassword: "example123",
+    email: "exampleTwitter@gmai.com",
+    password: "example123",
   },
 };
 
 const defaults = {
-  liEmail: "",
-  liPassword: "",
-  passwordType:"password"
+  email: "",
+  password: "",
+  passwordType: "password"
 };
 export default class LogIn extends Component {
+  // if the user click on the login used gmail fil the email &password by defult from the initialData objeact 
   state = {
-    liEmail: this.props.initialGmail ? initialData.gmail.liEmail :"",
-    liPassword: this.props.initialGmail ? initialData.gmail.liPassword :"",
+    email: this.props.props.initialGmail ? initialData.gmail.email : "",
+    password: this.props.props.initialGmail ? initialData.gmail.password : "",
     myData: defaults,
-    passwordType:"password"
+    passwordType: "password"
   };
-
+  // just to return the byGmail state in app = false 
+  componentDidMount() {
+    this.props.props.initialGmail && this.props.props.byGmail()
+  };
   handleLogIn = (by) => {
     this.setState({
-      liEmail: initialData[by].liEmail,
-      liPassword: initialData[by].liPassword,
+      email: initialData[by].email,
+      password: initialData[by].password,
     });
   };
 
-  goToSignUp = () => {
-    this.props.app.setState({ datashow: "SginUp" });
-  };
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submit", this.state);
-    this.setState((prevState) => ({
-      myData: {
-        liEmail: prevState.liEmail,
-        liPassword: prevState.liPassword,
-      },
-      ...defaults,
-    }));
+    // there is no DataBase to validation 
+    // if in the input any data change tha path used useNavigate 
+    if (this.state.email && this.state.password) {
+      this.setState((prevState) => ({
+        myData: {
+          email: prevState.email,
+          password: prevState.password,
+        },
+        ...defaults,
+      }));
+      console.log("before the Navigate");
+      this.props.Navigate("/GameDay")
+    }
   };
   handleChangeInput = (e) => {
     const { value, id } = e.target;
@@ -120,29 +130,31 @@ export default class LogIn extends Component {
                 {/* <Input id="" type="" placeholder="" label=""/> */}
                 <Input
                   onChange={this.handleChangeInput}
-                  id="liEmail"
+                  id="email"
                   type="email"
                   placeholder="Write your email"
                   label="Your email"
-                  value={this.state.liEmail}
+                  value={this.state.email}
                 />
 
                 {/* TO ADD THE ICON TO THE INPUT */}
 
                 <div className={`logInPassword ${this.state.passwordType}`}>
                   <span>
-                    <img src={logInPassword} alt="" onClick={()=>{
-                      this.setState({passwordType:
-                        this.state.passwordType==="password"?"text":"password"})
-                    }}/>
+                    <img src={logInPassword} alt="" onClick={() => {
+                      this.setState({
+                        passwordType:
+                          this.state.passwordType === "password" ? "text" : "password"
+                      })
+                    }} />
                   </span>
                   <Input
                     onChange={this.handleChangeInput}
-                    id="liPassword"
+                    id="password"
                     type={this.state.passwordType}
                     placeholder="Password"
                     label="Enter your password"
-                    value={this.state.liPassword}
+                    value={this.state.password}
                   />
                 </div>
 
@@ -156,7 +168,7 @@ export default class LogIn extends Component {
                 </Button>
                 <p className="Register">
                   Don’t have an account?{" "}
-                  <span onClick={() => this.props.pageShow("SignUp")}>Register</span>
+                  <Link to="/SignUp">Register</Link>
                 </p>
               </form>
             </div>
@@ -165,4 +177,10 @@ export default class LogIn extends Component {
       </Container>
     );
   }
+}
+// to pass the Navigate to use it in class components
+export function LogInRoute(props) {
+  const Navigate = useNavigate();
+  // pass all the props from the app 
+  return <LogIn Navigate={Navigate} props={props} />
 }

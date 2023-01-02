@@ -1,10 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import "./style.css"
-export default class Button extends Component {
-    render() {
-    const {color , bgColor} = this.props
-    return (
-        <button className={this.props.className||""} onClick={this.props.onclick} type={this.props.type} style={{ backgroundColor: `${bgColor}`, color:`${color}` }}>{this.props.children}</button>
-    )
-  }
-}
+const Button = ({ color, bgColor, className,toLogin, byGmail, type, children }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    if (toLogin) {
+      byGmail(true);
+      navigate('/');
+    }};
+  return (
+    <button
+      className={className}
+      onClick={handleClick}
+      type={type}
+      style={{ backgroundColor: bgColor, color: color }}
+    >
+      {children}
+    </button>
+  );
+};
+
+export default Button;

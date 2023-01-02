@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import './style.css'
+import { Link } from "react-router-dom";
 export default class Back extends Component {
   render() {
     return (
-        <span className="back" onClick={this.props.onclick}>
+        <Link to="/" className="back" >
         <svg
           width="10"
           height="18"
@@ -17,7 +18,7 @@ export default class Back extends Component {
           />
         </svg>
         <span>Back</span>
-      </span>
+      </Link>
     )
   }
 }

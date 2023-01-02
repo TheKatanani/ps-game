@@ -51,9 +51,14 @@
     width: 100%;
     gap: 12px;
   }
-  .AlertBtns  button{
+  .AlertBtns  button,.AlertBtns a{
     font-size: 25px;
     flex: 1;
+}
+.AlertBtns a{
+  text-align: center;
+  height: 64px;
+  line-height: 38px;
 }
 .Alert .Logo {
     margin: 35px auto 0;

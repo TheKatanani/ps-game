@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../Logo'
 import './style.css'
 export default class Alert extends Component {
@@ -9,7 +10,7 @@ export default class Alert extends Component {
         successfully registered
         </h2>
         <div className='AlertBtns'>
-        <button className="Alert-InBtn Btn-Right" onClick={this.props.Login}>LogIn</button>
+        <Link className="Alert-InBtn Btn-Right" to="/">LogIn</Link>
          <button className="Alert-InBtn Btn-Left" onClick={this.props.close}>close</button>
         </div>
          <Logo className="logIn"/>

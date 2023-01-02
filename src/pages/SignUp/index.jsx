@@ -79,24 +79,6 @@ export default class SignUp extends Component {
         this.setState({passwordStrength:"weak"})
       }
   };
-  // why the validate never to go in then ?! and do this in schema is importent ?!
-  // validate = (value) => {
-  //   this.schema.validate({password: value})
-  //   .then(() => {
-  //     // Password is strong
-  //     console.log("strong password");
-  //     this.setState({passwordStrength:"strong"})
-  //   })
-  //   .catch(() => {
-      //     // Password is medium or weak
-  //      if (value.match(passwordRegexMedium)) {
-  //       this.setState({passwordStrength:"medium"})
-  //     } else {
-  //       this.setState({passwordStrength:"weak"})
-  //     }
-  //   });
-  // };
-
   handleSubmit = (e) => {
     e.preventDefault()
     this.schema
@@ -133,7 +115,7 @@ export default class SignUp extends Component {
             <MainText color="#fff" />
           </div>
           <div className="form">
-            <Back onclick={() => this.props.pageShow("LogIn")} />
+            <Back/>
             <div className="content">
               <FormText
                 H1="Register Individual Account!"
@@ -184,7 +166,8 @@ export default class SignUp extends Component {
                   <Button
                     type="button"
                     bgColor="#fff"
-                    onclick={() => this.props.pageShow("LogIn", true)}
+                    byGmail={this.props.byGmail}
+                    toLogin
                     color="#000"
                   >
                     login

@@ -1,0 +1,36 @@
+.NewGame {
+    height: fit-content;
+    /* overflow: hidden; */
+    /* width: 200px; */
+  }
+  
+  .NewGame .content {
+    display: flex;
+    gap: 25px;
+    /* width: fit-content; */
+    overflow-x: scroll;
+    height: fit-content;
+}
+.content::-webkit-scrollbar {
+  height: 10px;
+  width: 6px; /* width of the scrollbar */
+  background-color: #F5F5F5; /* background color of the scrollbar */
+}
+
+.content::-webkit-scrollbar-thumb {
+  border-radius: 12px; /* roundness of the scrollbar handle */
+  background-color: #909090; /* color of the scrollbar handle */
+}
+
+.NewGame .content div{
+  min-width: 588px;
+}
+.NewGame h3{
+margin: 10px 10px 40px;
+/* font-family: 'Gilroy'; */
+font-style: normal;
+font-weight: 800;
+font-size: 35px;
+line-height: 43px;
+color: #000000;
+}

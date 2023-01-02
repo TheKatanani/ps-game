@@ -86,7 +86,8 @@ p.Register{
     text-align: center;
     color: #696F79;
 }
-p.Register span{
+p.Register a{
+    text-decoration: none;
     color: #1565D8;
     cursor: pointer;
 }
