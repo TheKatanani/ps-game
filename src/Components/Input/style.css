@@ -7,7 +7,7 @@ div label{
     color: #696F79;
     margin-top: 10px;
 }
-div input{
+div.input input{
     width: 426px;
     height: 64px;
     border: 1px solid #8692A6;

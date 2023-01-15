@@ -1,0 +1,60 @@
+ul.setting {
+    position: absolute;
+    right: -145px;
+    top:  10px;
+    background:#eee;    
+    box-shadow: inset 2px 4px 4px rgb(0 0 0 / 25%);
+    border: 1px solid #1565D8;
+    display: block;
+    height: fit-content;
+    text-align: center;
+    padding: 10px 0 0;
+    border-radius: 8px;
+    z-index: 9999;
+}
+ul.setting::before{
+    content: "";
+    position: absolute;
+    border: 15px solid ;
+    border-color: transparent #c7c7c7 transparent transparent ;
+    left: -30px;
+    top: 5px;
+    z-index: 999;
+}
+ul.setting li:not(:last-child){
+    margin: 12px 0;
+    /* border-bottom: 1px solid #1565D8; */
+}
+ul.setting a{
+    cursor: pointer;
+    color: #000;
+    position: relative;
+    padding: 3px 0;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+
+}
+ul.setting a:hover{
+    border-bottom: 2px solid #1565D8;
+}
+ul.setting a:hover::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7px;
+    height: 7px;
+    background-color: #1565D8;
+    border-radius: 50%;
+}
+ul.setting button{
+    all: unset;
+    cursor: pointer;
+    margin: 12px 0 0;
+    background-color: #1565D8;
+    color:#fff;
+    border-radius: 0px 0px 4px 4px;
+    padding: 8px 0;
+    width: 100%;
+}

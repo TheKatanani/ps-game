@@ -1,25 +1,36 @@
 div.Spiderman {
   background-image: url("../../images/Rectangle 4.png");
   background-size: cover;
-  position: relative;/*670px; 347px;*/
-  width: 588px;
-  height: 310px;
+  position: relative; /*670px; 347px;*/
+  /* width: 411px;
+  height: 200px; */
   overflow: hidden;
 }
 #imgName,
 #spiderman,
-div.Spiderman p{
+div.Spiderman p {
   position: absolute;
 }
 div.Spiderman #imgName {
-  left: -11%;
-  top: -19%;
+  left: 0%;
+  top: 0%;
 }
 #spiderman {
-  left: 47.02%;
+  left: 65.02%;
   right: -11.7%;
-  top: -0.04%;
+  top: 5.54%;
   bottom: 0.55%;
+  transition: 0.4s;
+  width: 170px;
+}
+div.Spiderman:hover{
+  overflow: initial;
+}
+div.Spiderman:hover #spiderman {
+  /* width: 323px;
+  left: 40.02%; */
+  /* right: -11.7%; */
+  top: -18.44%;
 }
 div.Spiderman p {
   left: 4.45%;

@@ -3,7 +3,7 @@ import "./style.css";
 export default class Input extends Component {
   render() {
     return (
-      <div>
+      <div className="input">
         <label htmlFor={this.props.id}>{this.props.label}</label>
         <input
           type={this.props.type}

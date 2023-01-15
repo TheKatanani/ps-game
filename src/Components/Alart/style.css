@@ -13,11 +13,13 @@
     padding: 15px;
     transition: 0.3s ease-in;
 }
+
   .Alert-InText {
     text-align: center;
     padding: 25px;
     margin-bottom: 20px;
     font-size: 45px;
+    position: relative;
 }
   .Alert-InBtn {
       padding: 10px 50px;
@@ -31,7 +33,7 @@
 }
   .Btn-Right:hover{
       background:#FFF;
-    color: #1565D8;
+    color: #1565D8 !important;
     border: 1px solid #1565D8;
   }
   .Btn-Left:hover{
@@ -41,7 +43,7 @@
   
   .Btn-Right{
       background: #1565D8;
-      color: #fff;
+      color: #fff !important;
     }
  
   .AlertBtns{
@@ -56,6 +58,7 @@
     flex: 1;
 }
 .AlertBtns a{
+  color: #FFF !important;
   text-align: center;
   height: 64px;
   line-height: 38px;

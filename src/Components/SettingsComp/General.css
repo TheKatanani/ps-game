@@ -1,0 +1,10 @@
+.General input{
+    border: none;
+    outline: none;
+    border: 2px solid #eee;
+}
+.General span{
+    color:#0d6efd;
+    padding: 0;
+    cursor: pointer;
+}

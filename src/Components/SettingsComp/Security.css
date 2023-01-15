@@ -1,0 +1,9 @@
+.Security button{
+    all:unset;
+    padding: 4px 8px;
+    background-color: #0d6efd;
+    border-radius: 4px;
+    color: #fff;
+}
+/* .Security input{
+} */

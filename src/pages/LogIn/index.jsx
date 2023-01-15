@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import "./style.css";
-
+import { object, string } from 'yup';
 import Container from "../../Components/Container";
 import Button from "../../Components/Button";
 import MainText from "../../Components/MainText";
@@ -18,11 +18,13 @@ import Ln from "../../images/Vectorin.png";
 import Twitter from "../../images/Vectortwitter.png";
 import LogInImg from "../../images/superscene-34-joystick_trans 1.png";
 import logInPassword from "../../images/VectorpasswordIcon.png";
+import axios from "axios";
+import { API } from "../../Components/API";
 // to fill defult data in four buttons and defult gmail from the signUp 
 const initialData = {
   gmail: {
     email: "exampleGmail@gmai.com",
-    password: "example123",
+    password: "mM1!@2#31",
   },
   github: {
     email: "exampleGithub@gmai.com",
@@ -30,11 +32,11 @@ const initialData = {
   },
   linkedIn: {
     email: "exampleLinkedIn@gmai.com",
-    password: "example123",
+    password: "mM1!@2#3",
   },
   twitter: {
     email: "exampleTwitter@gmai.com",
-    password: "example123",
+    password: "mM1!@2#31",
   },
 };
 
@@ -49,8 +51,14 @@ export default class LogIn extends Component {
     email: this.props.props.initialGmail ? initialData.gmail.email : "",
     password: this.props.props.initialGmail ? initialData.gmail.password : "",
     myData: defaults,
-    passwordType: "password"
+    passwordType: "password",
+    errors: null,
+    isLoading: false
   };
+  schema = object().shape({
+    email: string().email().required(),
+    password: string().required()
+  })
   // just to return the byGmail state in app = false 
   componentDidMount() {
     this.props.props.initialGmail && this.props.props.byGmail()
@@ -62,22 +70,29 @@ export default class LogIn extends Component {
     });
   };
 
-  handleSubmit = (e) => {
+  // this.props.Navigate("/GameDay")
+  handleSubmit = async  (e) => {
     e.preventDefault();
-    // there is no DataBase to validation 
-    // if in the input any data change tha path used useNavigate 
-    if (this.state.email && this.state.password) {
-      this.setState((prevState) => ({
-        myData: {
-          email: prevState.email,
-          password: prevState.password,
-        },
-        ...defaults,
-      }));
-      console.log("before the Navigate");
-      this.props.Navigate("/GameDay")
-    }
-  };
+    this.setState({isLoading: true});
+        try {
+            await this.schema.validate({
+                email: this.state.email,
+                password: this.state.password
+            }, {abortEarly: false});
+            const res = await axios.post(`${API}/users/login`, {
+                email: this.state.email,
+                password: this.state.password
+            });
+            if (res.data) {
+                localStorage.setItem('token', res.data.token);
+                this.props.props.login();
+            }
+        } catch (errors) {
+            this.setState({ errors });
+            console.log(errors)
+        }
+        this.setState({isLoading: false});
+    };
   handleChangeInput = (e) => {
     const { value, id } = e.target;
     this.setState({ [id]: value });
@@ -157,7 +172,8 @@ export default class LogIn extends Component {
                     value={this.state.password}
                   />
                 </div>
-
+                    {this.state.isLoading&&<p>Is Loading . . .</p>}
+                    {this.state.errors&&<div className="error">user name or password is wrong<p>{this.state.errors.message}</p></div>}
                 <Button
                   className="Login"
                   type="submit"

@@ -19,5 +19,9 @@ code {
   box-sizing: border-box;
 }
 a{
-  list-style: none;
+  list-style: none !important;
+  text-decoration: none !important;
+}
+p{
+  margin-bottom: 0;
 }

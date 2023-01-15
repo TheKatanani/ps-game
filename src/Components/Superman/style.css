@@ -1,35 +1,44 @@
 div.Superman {
-    background-image: url("../../images/Rectangle 3.png");
-    background-size: cover;
-    position: relative;
-    width: 588px;
-    height: 310px;
-    overflow: hidden;
-  }
-  #Superman,
-  div.Superman p{
-    position: absolute;
-  }
-  div.Superman #Superman {
-    left: -2.16%;
-    right: 43.74%;
-    top: 5.39%;
-    bottom: 0%;
-    border-radius: 0px 0px 0px 64px;
-  }
-  div.Superman p {
-    left: 27.23%;
-    right: 5.01%;
-    top: 64.93%;
-    bottom: 6.44%;
-    
-    text-align: end;
-    /* font-family: "Gilroy"; */
-    font-style: normal;
-    font-weight: 800;
-    font-size: 25px;
-    line-height: 31px;
-  
-    color: #ffffff;
-  }
-  
+  background-image: url("../../images/Rectangle 3.png");
+  background-size: cover;
+  position: relative;
+  /* width: 525px;
+  height: 248px; */
+  overflow: hidden;
+}
+#Superman{
+  width: 250px;
+}
+#Superman,
+div.Superman p {
+  position: absolute;
+}
+div.Superman #Superman {
+  transition: 0.4s;
+  left: -2.16%;
+  right: 43.74%;
+  top: 5.39%;
+  bottom: 0%;
+}
+div.Superman:hover {
+  overflow: initial;
+}
+div.Superman:hover #Superman{
+  top: -22%;
+  width: 300px;
+}
+div.Superman p {
+  left: 27.23%;
+  right: 5.01%;
+  top: 64.93%;
+  bottom: 2%;
+
+  text-align: end;
+  /* font-family: "Gilroy"; */
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 31px;
+
+  color: #ffffff;
+}

@@ -91,3 +91,6 @@ p.Register a{
     color: #1565D8;
     cursor: pointer;
 }
+.error{
+    color: red;
+}

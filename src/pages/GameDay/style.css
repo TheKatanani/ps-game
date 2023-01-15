@@ -1,56 +1,15 @@
 .GameDay{
     /* width: 100vw; */
     /* overflow: hidden; */
-    margin-left: 122px;
+    /* margin-left: 122px; */
 }
 .sesstion2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 81px 20px;
+    padding: 0px 15px;
     gap: 20px;
-}
-nav{
-    position: fixed;
-    z-index: 2222;
-    left: 0;
-    top: 0;
-}
-nav::after{
-    content: "";
-    
-position: absolute;
-width: 9px;
-height: 80vh;
-right: 0;
-top: 50%;
-transform: translateY(-50%);
-
-background: #FFFFFF;
-box-shadow: inset 2px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 38px;
-}
-nav ul{
-    width: 122px;
-    height: 100VH;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-nav ul div{
-    height: 37vh;
-        display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-li{
-    list-style: none;
-}
-nav ul  li img{
-    cursor: pointer;
+    margin-top: -20px;
 }
 .contint{
     flex: calc(100vw - 122px);

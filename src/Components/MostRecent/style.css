@@ -1,6 +1,6 @@
 .MostRecent .box {
-  width: 678px;
-  height: 358px;
+  width: 579px;
+  height: 282px;
   background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.42) 0%,
@@ -18,11 +18,12 @@
   font-size: 35px;
   line-height: 43px;
   color: #000000;
-  margin: 10px 10px 40px;
+  margin: 10px 10px 10px;
 }
 .MostRecent .box img {
+  width: 105px;
   position: absolute;
-  right: 0;
+  right: -20px;
   top: 0;
   background: #32fb00e3;
   box-shadow: 0px 0px 567px #32fb00, 0px 0px 90px #32fb01, 0px 0px 189px #32fb00,
@@ -31,27 +32,28 @@
 }
 .MostRecent .box .title {
   position: absolute;
-  right: 160px;
+  right: 100px;
   top: 25px;
 }
 .MostRecent .box .title p {
   font-style: normal;
   font-weight: 800;
-  font-size: 25px;
+  font-size: 1.3rem;
   text-align: right;
   text-transform: uppercase;
   color: #ffffff;
 }
 .MostRecent .box .title p:last-child {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
 }
 .MostRecent .box .desc {
   position: absolute;
-  bottom: 0;
+  bottom: 0;    
+  top: 178px;
   left: 0;
   right: 0;
-  height: 118px;
+  /* height: 118px; */
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     radial-gradient(
         97.57% 210.75% at 0.9% 2.98%,
@@ -68,11 +70,11 @@
 .MostRecent .box .desc p {
   font-style: normal;
   font-weight: 800;
-  font-size: 25px;
+  font-size: 1.3rem;
   line-height: 31px;
   text-transform: uppercase;
   color: #ffffff;
 }
 .MostRecent .box .desc p:last-child {
-  font-size: 19px;
+  font-size: 1rem;
 }

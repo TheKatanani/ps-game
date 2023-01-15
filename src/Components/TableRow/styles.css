@@ -1,0 +1,20 @@
+td button {
+  all:unset;
+  color: #fff;
+  font-size: 13px;
+  padding: 5px 7px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+td button.visit {
+    background-color: #1565D8;
+  }
+  
+  td button.delete {
+    background-color: #dc3545;
+  }
+.id{
+    width: 100px;
+    overflow: auto;
+}

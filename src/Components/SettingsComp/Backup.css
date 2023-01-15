@@ -1,0 +1,11 @@
+.mamager div {
+    width: 32%;
+    cursor: pointer;
+}
+.mamager div:nth-child(2) h6{
+    color: #0d6efd;
+}
+.Site textarea {
+    height: 170px;
+    outline: none;
+}
