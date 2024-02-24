@@ -29,6 +29,12 @@
     height: 21px;
     margin: -8px 0 20px;transition: 0.3s;
 }
+@media (width <= 669px)  {
+    .PasswordStrong{
+        padding:0 20px;
+    }
+    
+}
 .PasswordStrong.strong .progres span{
     width: 100%;
     background-color: #1565D8;

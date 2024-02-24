@@ -1,8 +1,14 @@
 .back{
     position: absolute;
-    top: 74px;
-    left: 77px;
+    top: 20px;
+    left: 40px;
     cursor: pointer;
+}
+@media (width <= 669px)  {
+    .back{
+        top: 10px;
+        left: 20px;
+    }
 }
 .back span{
     margin-left: 8px;

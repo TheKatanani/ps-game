@@ -1,7 +1,8 @@
 .mainbox.signUp{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    height: 1024px;
+    min-height: 100vh;
     margin: auto;
     background-color: #FFFFFF;
 }
@@ -9,11 +10,20 @@
     background-image: url('../../images/Rectangle\ 31.png');
     background-size: cover;
     width: 44.6%;
-    height: 1024px;
+    min-height: 100vh;
+    height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+@media (width <= 990px)  {
+    .signUp .imgBox{
+        width: initial;
+        height: 100vh;
+    }
+    
 }
 .signUp .imgBox::before{
     content: "";
@@ -36,6 +46,13 @@
     justify-content: center;
     align-items: center;
     position: relative;
+}
+@media (width <= 990px)  {
+    .signUp .form{
+        padding: 20px;
+        padding-bottom: 60px;
+    }
+    
 }
 .signUp .form .content{
     transform: translateY(25px);

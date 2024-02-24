@@ -9,6 +9,12 @@
     position: relative;
     color: #fff;
     transform: translateY(-72px);
+}
+@media (width <= 990px)  {
+    .mainText{
+        width: initial;
+        height: initial;
+    }
     
 }
 .mainText.logIn{
@@ -21,7 +27,7 @@ font-style: italic;
 font-size: 96px;
     color: #00DAF7;
     position: absolute;
-    top: 0;
+    top: -15px;
     left: 0;
 }
 .after{

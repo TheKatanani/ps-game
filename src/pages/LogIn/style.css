@@ -1,42 +1,58 @@
 .mainbox.LogIn{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    height: 1024px;
+    min-height: 100vh;
     margin: auto;
     background-color: #FFFFFF;
 }
 .LogIn .imgBox{
-    width: 44.6%;
-    height: 1024px;
+    width: 44.6%; 
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+@media (width <= 990px)  {
+    .LogIn .imgBox{
+        width: initial;
+        height: 100vh;
+        }
+    
+}
 .LogIn .imgBox .Logo{
     position: absolute;
-    top: 70px;
-    left: 90px;
+    top: 90px;
+    left: 60px;
+}
+.LogIn .imgBox .Logo img{
+    width: 90%;
 }
 .LogIn .form{
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    transform: translateY(-35px);
+    position: relative; 
 }
-.LogIn .back{
-    position: absolute;
-    top: 74px;
-    left: 77px;
-    cursor: pointer;
+@media (width <= 990px)  {
+    .LogIn .form{
+        padding: 20px;
+        margin-bottom: 30px;
+    }
 }
+@media (width <= 669px)  {
+    .LogIn .form .content{
+        width: 100%;
+    }
+}
+
 
 .LogIn .LogInImg{
     position: absolute;
-    bottom: 97px;
-    right: -37px;
+    bottom: 70px;
+    right: -20px;
+    width: 55%;
 }
 
 .icons{
@@ -60,6 +76,13 @@ label[for="liEmail"] {
     right: 22px;
     cursor: pointer;
 }
+@media (width <= 669px)  {
+    .logInPassword span{
+        bottom: 24px;
+        right: 26px;
+    }
+    
+}
 /* add  show class to use this code */
 .logInPassword.text span::before{
     content: "";
@@ -78,13 +101,17 @@ label[for="liEmail"] {
 p.Register{
     margin: 0 auto;
     position: absolute;
-    width: 430px;
     height: 19px;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
     color: #696F79;
+}
+@media (width <= 669px)  {
+    p.Register{
+        padding: 0 20px;
+    }
 }
 p.Register a{
     text-decoration: none;
@@ -93,4 +120,10 @@ p.Register a{
 }
 .error{
     color: red;
+}
+@media (width <= 669px)  {
+    .button{
+        padding:0 20px;
+    }
+    
 }

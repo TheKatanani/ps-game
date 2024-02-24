@@ -3,23 +3,37 @@ div label{
     display: block;
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
     color: #696F79;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 div.input input{
-    width: 426px;
-    height: 64px;
+    width: 100%;
+    height: 55px;
     border: 1px solid #8692A6;
     border-radius: 6px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    /* identical to box height */
+    font-weight: 400;
+    font-size: 12px;
     color: #8692A6;
-    padding: 0 0px 0 40px; 
-    margin: 15px 0;
+    padding: 0 0px 0 20px; 
+    margin: 8px 0;
     outline: none;
+}
+@media (width <= 999px)  {
+    div.input input{
+        width: 100%;
+        height: 45px;
+    }
+    
+}
+@media (width <= 669px)  {
+    div.input {
+        padding: 0 20px;
+    }
+    div.input input{
+        width: 100%;
+        height: 55px;
+    }
+    
 }
 #confirmPassword.wrong{
     border-color: red;

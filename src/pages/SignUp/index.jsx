@@ -167,21 +167,25 @@ export default class SignUp extends Component {
                   className={this.state.isWrongRepeat ? "wrong" : ""}
                 />
                 <Checkbox id="agree" label="I agree to terms & conditions" onChange={this.handleChangeCheckBox} />
-                <Button type="submit" bgColor="#1565D8" color="#fff">
-                  Register Account
-                </Button>
+                  <div className="button">
+                    <Button type="submit" bgColor="#1565D8" color="#fff">
+                      Register Account
+                    </Button>
+                  </div>
                 <Or />
                 <div className="LogInBtn">
                   <img src={GoogleIcon} alt="" className="icon" />
-                  <Button
-                    type="button"
-                    bgColor="#fff"
-                    byGmail={this.props.byGmail}
-                    toLogin
-                    color="#000"
-                  >
-                    login
-                  </Button>
+                  <div className="button">
+                    <Button
+                      type="button"
+                      bgColor="#fff"
+                      byGmail={this.props.byGmail}
+                      toLogin
+                      color="#000"
+                    >
+                      login
+                    </Button>
+                  </div>
                 </div>
               </form>
             </div>

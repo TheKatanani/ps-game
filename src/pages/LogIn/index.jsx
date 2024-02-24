@@ -71,28 +71,28 @@ export default class LogIn extends Component {
   };
 
   // this.props.Navigate("/GameDay")
-  handleSubmit = async  (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    this.setState({isLoading: true});
-        try {
-            await this.schema.validate({
-                email: this.state.email,
-                password: this.state.password
-            }, {abortEarly: false});
-            const res = await axios.post(`${API}/users/login`, {
-                email: this.state.email,
-                password: this.state.password
-            });
-            if (res.data) {
-                localStorage.setItem('token', res.data.token);
-                this.props.props.login();
-            }
-        } catch (errors) {
-            this.setState({ errors });
-            console.log(errors)
-        }
-        this.setState({isLoading: false});
-    };
+    this.setState({ isLoading: true });
+    try {
+      await this.schema.validate({
+        email: this.state.email,
+        password: this.state.password
+      }, { abortEarly: false });
+      const res = await axios.post(`${API}/users/login`, {
+        email: this.state.email,
+        password: this.state.password
+      });
+      if (res.data) {
+        localStorage.setItem('token', res.data.token);
+        this.props.props.login();
+      }
+    } catch (errors) {
+      this.setState({ errors });
+      console.log(errors)
+    }
+    this.setState({ isLoading: false });
+  };
   handleChangeInput = (e) => {
     const { value, id } = e.target;
     this.setState({ [id]: value });
@@ -172,16 +172,18 @@ export default class LogIn extends Component {
                     value={this.state.password}
                   />
                 </div>
-                    {this.state.isLoading&&<p>Is Loading . . .</p>}
-                    {this.state.errors&&<div className="error">user name or password is wrong<p>{this.state.errors.message}</p></div>}
-                <Button
-                  className="Login"
-                  type="submit"
-                  bgColor="#1565D8"
-                  color="#fff"
-                >
-                  Login
-                </Button>
+                {this.state.isLoading && <p>Is Loading . . .</p>}
+                {this.state.errors && <div className="error">user name or password is wrong<p>{this.state.errors.message}</p></div>}
+                <div className="button">
+                  <Button
+                    className="Login"
+                    type="submit"
+                    bgColor="#1565D8"
+                    color="#fff"
+                  >
+                    Login
+                  </Button>
+                </div>
                 <p className="Register">
                   Don’t have an account?{" "}
                   <Link to="/SignUp">Register</Link>
