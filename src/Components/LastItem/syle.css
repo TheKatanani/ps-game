@@ -1,5 +1,4 @@
-.LastItem{
-    width: 391px;
+.LastItem{ 
     height: 50px;
     display: flex;
     align-items: center;   
@@ -10,13 +9,14 @@
 }
 .LastItem img{
     z-index: 1;
+    width: 15%;
     transform: translate(-10px,10px);
 }
 
 .LastItem  p{
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 1.2rem;
     line-height: 25px;
     color: #000000;
 }

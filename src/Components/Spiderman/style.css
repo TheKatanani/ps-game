@@ -21,7 +21,7 @@ div.Spiderman #imgName {
   top: 5.54%;
   bottom: 0.55%;
   transition: 0.4s;
-  width: 170px;
+  width: 38%;
 }
 div.Spiderman:hover{
   overflow: initial;
@@ -30,7 +30,7 @@ div.Spiderman:hover #spiderman {
   /* width: 323px;
   left: 40.02%; */
   /* right: -11.7%; */
-  top: -18.44%;
+  top: -8.44%;
 }
 div.Spiderman p {
   left: 4.45%;
@@ -40,7 +40,7 @@ div.Spiderman p {
   /* font-family: "Gilroy"; */
   font-style: normal;
   font-weight: 800;
-  font-size: 25px;
+  font-size: 1rem;
   line-height: 31px;
 
   color: #ffffff;

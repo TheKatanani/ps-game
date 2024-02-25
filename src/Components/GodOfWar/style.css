@@ -20,7 +20,7 @@ div.GodOfWar #imgName {
 #GodOfWar {
   bottom: 0%;
   border-radius: 0px 0px 0px 44px;
-  width: 300px;
+  width: 60%;
   left: 0px;
   transition: 0.3s;
 
@@ -28,7 +28,7 @@ div.GodOfWar #imgName {
 div.GodOfWar:hover #GodOfWar {
   bottom: 0%;
   border-radius: 0px 0px 0px 44px;
-  width: 380px;
+  width: 80%;
   left: 0px;
 }
 div.GodOfWar p {
@@ -40,7 +40,7 @@ div.GodOfWar p {
     /* font-family: 'Gilroy'; */
     font-style: normal;
     font-weight: 800;
-    font-size: 25px;
+    font-size: 1rem;
     line-height: 31px;
     text-align: right;
     

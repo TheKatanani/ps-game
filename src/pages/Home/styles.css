@@ -1,3 +1,8 @@
 .contint{
     margin-left: 122px;
 }
+@media (width <=667px) { 
+    .contint{
+        margin-left: 65px;
+    }
+}

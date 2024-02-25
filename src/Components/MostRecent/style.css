@@ -1,5 +1,8 @@
+.MostRecent{
+  flex: 1;
+  min-width:min(350px,100%)
+}
 .MostRecent .box {
-  width: 579px;
   height: 282px;
   background: linear-gradient(
       180deg,
@@ -9,21 +12,22 @@
       rgba(0, 0, 0, 0.42) 100%
     ),
     url("../../images/Rectangle\ 11.png");
+    background-size: cover;
   border-radius: 45px;
   position: relative;
 }
 .MostRecent h3 {
   font-style: normal;
   font-weight: 800;
-  font-size: 35px;
+  font-size: 1.8rem;
   line-height: 43px;
   color: #000000;
   margin: 10px 10px 10px;
 }
 .MostRecent .box img {
-  width: 105px;
+  width: 90px;
   position: absolute;
-  right: -20px;
+  right: 5px;
   top: 0;
   background: #32fb00e3;
   box-shadow: 0px 0px 567px #32fb00, 0px 0px 90px #32fb01, 0px 0px 189px #32fb00,
@@ -74,6 +78,12 @@
   line-height: 31px;
   text-transform: uppercase;
   color: #ffffff;
+}
+@media (width <=667px) { 
+.MostRecent .box .desc p {
+  font-size: 1rem;
+
+}
 }
 .MostRecent .box .desc p:last-child {
   font-size: 1rem;

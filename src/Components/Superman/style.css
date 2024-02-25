@@ -7,7 +7,7 @@ div.Superman {
   overflow: hidden;
 }
 #Superman{
-  width: 250px;
+  width: 60%;
 }
 #Superman,
 div.Superman p {
@@ -24,8 +24,8 @@ div.Superman:hover {
   overflow: initial;
 }
 div.Superman:hover #Superman{
-  top: -22%;
-  width: 300px;
+  top: -18%;
+  width: 65%;
 }
 div.Superman p {
   left: 27.23%;
@@ -37,7 +37,7 @@ div.Superman p {
   /* font-family: "Gilroy"; */
   font-style: normal;
   font-weight: 800;
-  font-size: 25px;
+  font-size: 1rem;
   line-height: 31px;
 
   color: #ffffff;

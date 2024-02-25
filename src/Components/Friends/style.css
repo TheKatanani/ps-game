@@ -3,12 +3,13 @@
     flex-direction: column;
     justify-content: center;
     height: 450px;
+    flex: 0.4;
 }
 .Friends h3{
 /* margin: 30px 0; */
     font-style: normal;
-    font-weight: 800;
-    font-size: 35px;
+    font-weight: 800;    
+    font-size: 1.8rem;
     line-height: 43px;
 
     color: #000000;

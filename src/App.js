@@ -17,7 +17,7 @@ const AppWithUseNavegate =()=>{
 class App extends React.Component {
   state={
     initialGmail:false,
-    isAuthorized: true,
+    isAuthorized: false,
   }
   byGmail = (v=false)=>{
     this.setState({initialGmail:v})

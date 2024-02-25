@@ -1,7 +1,11 @@
-.LastPlayed h3{
+.LastPlayed {
+    flex:0.8;
+    min-width:min(300px,100%)
+}
+.LastPlayed  h3{
     font-style: normal;
     font-weight: 800;
-    font-size: 35px;
+    font-size: 1.8rem;
     line-height: 43px;
     color: #000000;
     margin: 10px 10px 20px;

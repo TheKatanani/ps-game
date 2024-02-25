@@ -2,14 +2,21 @@
     /* width: 100vw; */
     /* overflow: hidden; */
     /* margin-left: 122px; */
+    margin-top: 77px;
 }
 .sesstion2{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0px 15px;
-    gap: 20px;
+    gap: 30px;
     margin-top: -20px;
+}
+@media (width <= 667px) {
+    .sesstion2{
+        flex-direction: column;
+    }
 }
 .contint{
     flex: calc(100vw - 122px);
